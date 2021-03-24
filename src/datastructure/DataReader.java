@@ -1,5 +1,9 @@
 package datastructure;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class DataReader {
 
     public static void main(String[] args) {
@@ -18,8 +22,36 @@ public class DataReader {
          * Use For-Each & While-loop with Iterator to retrieve data.
          */
 
-        String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+        String textFile = System.getProperty("user.dir") + "src/data/self-driving-car";
+        FileReader fileReader=null;;
+        BufferedReader bufferedReader=null;
+        String data = "";
+        try {
+            fileReader = new FileReader(textFile);
+            bufferedReader = new BufferedReader(fileReader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            while ((data = bufferedReader.readLine()) != null) {
+                System.out.println(data);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try{
+                fileReader.close();
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
 
     }
-
 }
+
+
+
+
+

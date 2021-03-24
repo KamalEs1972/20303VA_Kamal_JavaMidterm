@@ -14,9 +14,13 @@ public class UnitTestingMath {
        System.out.print("Fibonacci Series of  number 40"+  math2.minNumber  + " numbers:");
         System.out.println("\n**********************************************");
 
-        System.out.println("\nFindMissingNumber :");
-        FindMissingNumber math4 = new FindMissingNumber();
+        System.out.print("\nFindLowestDifference :");
+        FindLowestDifference math8 = new FindLowestDifference();
+        System.out.println(FindLowestDifference.lowestDiff(math8.array1, math8.array2));
+        System.out.println("\n**********************************************");
 
+        System.out.print("\nFindMissingNumber :");
+        FindMissingNumber math4 = new FindMissingNumber();
         System.out.println("The Missing number is " + math4.miss);
         System.out.println("\n**********************************************");
 
@@ -36,10 +40,8 @@ public class UnitTestingMath {
         System.out.println(math6.primeNumbers);
         System.out.println("\n**********************************************");
 
-        System.out.print("\nFindLowestDifference :");
-        FindLowestDifference math8 = new FindLowestDifference();
 
-        System.out.println(FindLowestDifference.lowestDiff(math8.array1, math8.array2));
+
 
 
 

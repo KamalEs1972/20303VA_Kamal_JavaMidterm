@@ -15,29 +15,29 @@ public class UseMap {
          *
          * Store and retrieve data from/to a database table.
          */
-        HashMap<Integer, String> h = new HashMap<>();
-        h.put(8454, "lamia");
-        h.put(4567, "azar");
-        h.put(7898, "rahim");
-        System.out.println(h.get(8454));
-        h.remove(7898);
-        System.out.println(h);
+        HashMap<Integer, String> m = new HashMap<>();
+        m.put(1234, "Kamal");
+        m.put(4321, "Karim");
+        m.put(5678, "Fatima");
+        System.out.println(m.get(1234));
+        m.remove(4321);
+        System.out.println(m);
         System.out.println();
-        System.out.println(h.keySet());
-        System.out.println(h.entrySet());
-        List<String> citrusFruit=new ArrayList<>();
-        citrusFruit.add("lemon");
-        citrusFruit.add("grapefruit");
-        List<String> berriesFruit=new ArrayList<>() ;
-        berriesFruit.add("blackberry");
-        berriesFruit.add("strawberry");
-        berriesFruit.add("blueberry");
-        Map<String, List <String>> m = new HashMap<>();
-        m.put("Berry",berriesFruit);
-        m.put("Rutaceae", citrusFruit);
-        for(Map.Entry<String, List<String>> fruit: m.entrySet()){
-            System.out.println(fruit.getKey() );
-            System.out.println(fruit.getValue());
+        System.out.println(m.keySet());
+        System.out.println(m.entrySet());
+        List<String> cake=new ArrayList<>();
+        cake.add("Chocolate");
+        cake.add("IceCream");
+        List<String> cookies=new ArrayList<>() ;
+        cookies.add("GingerBread");
+        cookies.add("ButterCookie");
+        cookies.add("Macaroons");
+        Map<String, List <String>> f = new HashMap<>();
+        f.put("ButterCookie",cookies);
+        f.put("Tiramisu", cake);
+        for(Map.Entry<String, List<String>> sweet: f.entrySet()){
+            System.out.println(sweet.getKey() );
+            System.out.println(sweet.getValue());
 
 
 

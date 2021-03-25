@@ -1,5 +1,9 @@
 package datastructure;
 
+import databases.ConnectToSqlDB;
+
+import java.util.*;
+
 public class UseQueue {
 
     public static void main(String[] args) {
@@ -9,6 +13,42 @@ public class UseQueue {
          *
          * Store and retrieve data from/to a database table.
          */
+
+        Queue<String> q = new LinkedList<>();
+        q.add("Manal");
+        q.add("Karim");
+        q.add("Kamal");
+        q.add("Rana");
+        q.add("Gigi");
+        q.add("Moe");
+        q.add("Fatma");
+        q.add("Bayan");
+
+        q.remove();
+        System.out.println("The head of this queue is: "+q.peek());
+
+        q.poll();
+
+        Iterator it = q.iterator() ;
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
+
+        q.remove("Gigi");
+        q.poll();
+        for(String queue : q) {
+            System.out.print(queue + " ");
+        }
+
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+
+        Random rand = new Random();
+        for (int i = 1; i < 15; i++) {
+            queue.add(rand.nextInt(40));
+        }
+        System.out.println("Queue values are: " +queue);
+        Integer head = queue.peek();
+        System.out.println("Head of the queue is: " + head);
 
     }
 
